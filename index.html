@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,9 +18,14 @@
     
    
     <style>
+        .poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
         /* General body styling */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: sans-serif;
             margin: 0;
             padding: 0;
             background-color: white;
@@ -36,6 +42,7 @@
             font-weight: 600PX;
             position: relative;
             color: #04374e;
+            font-family: sans-serif;
             
         }
 
@@ -120,6 +127,7 @@
             color: #2c3e50;
             margin: 20px 0;
             font-weight: bold;
+            font-family: sans-serif;
         }
 
         /* Container styling */
@@ -376,17 +384,16 @@ th select option {
             </button>
         </div>
     </nav>
-    <img src="https://via.placeholder.com/150" id="watermark" 
-    style="position:absolute; opacity:0.1; width: 800px; height: auto;">
-
-    
+   
+        
+            <img src="https://via.placeholder.com/150" id="watermark" style="position:absolute; opacity:0.0; width:150px; right:10px; top:10px;">
        
             <div class="container" id="table-container">
 
-                <button class="data">COMPARE & CHOOSE</button>
+                <button class="data" style="margin-top: 35px;">COMPARE & CHOOSE</button>
 
-    <h1 style="margin-top: 35px; color: #04374e;">Smart Insurance Comparison<br>
-         Discover the Perfect Coverage for You</h1>
+    <h1 style="margin-top: 65px; color: #04374e;">Smart Insurance Comparison<br>
+         Discover the Perfect Coverage for You</h1>
 
             <table>
                     <tr>
@@ -543,15 +550,12 @@ th select option {
             
            
         </div>
-        <!-- watermark-->
         <div class="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.1;">
             <img src="https://herculesadvisors.in/wp-content/uploads/2024/11/Untitled-design-2-e1731668329705.png" alt="Hercules Insurance Logo" style="width: 800px; height: auto;">
         </div>
 
         <!-- Print / Download Button-->
         <button onclick="window.print()"><i class="fa fa-download"></i> Download</button> 
-       
-        
 
            
                 
@@ -561,12 +565,25 @@ th select option {
         <p id="serviceDescription"></p>
     </div>
     
-   
+  <!-- <div class="data1">
+        <h2>Product Benefits:</h2>
+        <h2>SBI Arogya Supreme Pro </h2>
+        <p>The SBI Arogya Supreme Pro Secure Plan offers comprehensive coverage that includes hospitalisation, pre-hospitalisation, and post-hospitalisation expenses. However, that the pre-hospitalisation expenses are covered for up to 60 days before hospital admission and post-hospitalisation expenses up to 180 days after discharge, all up to the sum insured. In addition, the policy pays up to the sum insured amount for all day care services, domiciliary treatments, expenses of donors for organ donation procedures, modern treatments, and non-medical expenses. Moreover, with no restrictions on room rent, the SBI Arogya Supreme Pro Plan gives you the freedom to select any room. There is no limit on ICU rent and no provision for copayments either. However, an optional deductible is applicable under the policy, and you have the flexibility to choose from the following options: 25K/50K/100K/200K/300K as an option. Common medical procedures and treatments, such as joint replacement surgery and cataract treatments, are not restricted under this plan and are therefore covered up to the sum insured. Notably, under this plan, specific treatments have a 24-month waiting time, whereas pre-existing conditions have a 36-month waiting period.</p>
+
+        <h2>Royal Sundaram Next Gen</h2>
+        <p>The Royal Sundaram Next Gen Plan provides comprehensive coverage that encompasses hospitalisation costs, as well as pre and post-hospitalization expenses. Pre-hosp expenses are covered for up to 90 days before admission, while post-hospitalization expenses are covered for up to 180 days after discharge, both within the sum insured. Additionally, the policy covers all daycare treatments, domiciliary treatments (except for 15 illnesses), expenses of donors for organ donation procedures, and modern treatments all up to the sum insured. Please note that non-medical expenses are covered up to the sum assured as an add-on. Moreover, the plan offers the flexibility to choose any room without imposing room rent limits, though it is available as an add-on. There are no limits on ICU rent or deductibles. Also, this plan offers an optional co-payment of 10% to 50%. The policy covers common medical treatments and surgeries, such as cataract and joint replacement surgeries, up to the sum insured. However, it's important to note that pre-existing conditions and specific conditions have a 12-month waiting period (as an add-on). As an add-on, this plan allows a 90-day waiting period for conditions like BP, Diabetes, and Heart Disease (unless these diseases are classified as pre-existing conditions).</p>
+
+        <h2>NIA - Yuva Bharat Health - Base Plan</h2>
+        <p>The NIA - Yuva Bharat Health - Base Plan Plan provides comprehensive coverage for hospitalisation, pre-hospitalisation, and post-hospitalisation expenses. It covers pre- costs for up to 60 days before you're admitted and post-hospitalisation expenses for up to 90 days after discharge, all within the sum insured. Plus, it includes everything from day care procedures and domiciliary treatments to expenses for organ donation, modern treatments, and non-medical expenses, all up to sum assured. The Tata AIG MediCare Premier Plan gives you the freedom to choose any hospital room without room rent limits. Furthermore, there is no ICU rent limit, copayments, or deductibles under the plan. The policy places no restrictions on common medical treatments or surgeries, like cataracts, joint replacement surgeries, etc. However, it's important to know that pre-existing conditions come with a 24-month waiting period, and certain specific diseases also carry a 24-month waiting period.</p>
+    </div>-->
 
    
          <script>
+            
+         
+   
            
-           // Simulated database
+            // Simulated database
             const insuranceData = {
                 "State Bank of india": 
                 {
@@ -593,7 +610,7 @@ th select option {
 
                 },
                 "Star Health": {
-                    "Star Comphrensive": { roomRent:"Single private a/c room", copay:"NO",  prePost:"60 days/90 days", Consumables:"NO", power:"50% bonus upto 100%", restoration:"Once a year ", Day:"Yes", Sublimits:"yes on many illnesses", Life:"Yes", Hospital:"14000", Extra:"OPD cover Covered upto ₹2,100 per year", diseases:"Covered after 3 years", Deductible:"Yes", Maternity:"Upto ₹30,000 for normal and upto ₹50,000 for c-sec", Road:"aCovered at actual cost", OPD:"Yes available", wait:"", Preventive:""},
+                    "Star Comphrensive": { roomRent:"Single private a/c room", copay:"NO",  prePost:"60 days/90 days", Consumables:"NO", power:"50% bonus upto 100%", restoration:"Once a year ", Day:"Yes", Sublimits:"yes on many illnesses", Life:"Yes", Hospital:"14000", Extra:"OPD cover Covered upto ₹2,100 per year", diseases:"Covered after 3 years", Deductible:"Yes", Maternity:"Upto ₹30,000 for normal and upto ₹50,000 for c-sec", Road:"Covered at actual cost", OPD:"Yes available", wait:"", Preventive:""},
                     "Super star": { roomRent:"NO", copay:"NO",  prePost:"90 days/180 days", Consumables:"Yes", power:"50% bonus upto 100% with the addition of a rider100% additional sum insured after each renewal (irrespective of claim) without any maximum limit on accumulation (Unlimited)", restoration:"Unlimited Restoration", Day:"Yes", Sublimits:"NO", Life:"Yes", Hospital:"14000", Extra:"One unlimited claim,MAternity benefit,Waiver of premium ", diseases:"3 years waiting period But waiver available for Asthama,Hypertension Cholestrol and diabeties", Deductible:"Yes", Maternity:"Yes with rider", Road:"Covered at actual cost", OPD:"Available upto 25,000 with a rider", wait:"", Preventive:""},
                     "Health Assure": { roomRent:"Any category except suite and above", copay:"NO",  prePost:"60 days/180 days", Consumables:"Yes", power:"5% of the Sum Insured for each claim-free year subject to a maximum of 100% of the Sum Insured.", restoration:"Unlimited Restoration", Day:"Yes", Sublimits:"Yes on many illnesses", Life:"Yes", Hospital:"14000", Extra:"New Born Baby is covered from Day 1 (Premium will be charged at the time of policy renewal)", diseases:"Covered after 3 years", Deductible:"Yes", Maternity:"Covered upto ₹1 lakh", Road:"covered upto sum insured", OPD:"NO", wait:"", Preventive:""},
                     "Smart Health Pro": { roomRent:"Single private ac room", copay:"NO",  prePost:"60/180", Consumables:"yes with rider", power:"50% upto mazimum of 100%", restoration:"100% os Bse Sun insured once a year", Day:"upto sum insured", Sublimits:"Yes", Life:"Yes", Hospital:"14000", Extra:"None", diseases:"3 years", Deductible:"Yes", Maternity:"NO", Road:"Upto Sum insured", OPD:"NO", wait:"", Preventive:""},
@@ -739,20 +756,7 @@ th select option {
             // Initialize dropdowns on page load
             populateCompanies();
         </script>
-</div>
-
-<!--<div class="data1">
-    <h2>Product Benefits:</h2>
-    <h2>SBI Arogya Supreme Pro </h2>
-    <p>The SBI Arogya Supreme Pro Secure Plan offers comprehensive coverage that includes hospitalisation, pre-hospitalisation, and post-hospitalisation expenses. However, that the pre-hospitalisation expenses are covered for up to 60 days before hospital admission and post-hospitalisation expenses up to 180 days after discharge, all up to the sum insured. In addition, the policy pays up to the sum insured amount for all day care services, domiciliary treatments, expenses of donors for organ donation procedures, modern treatments, and non-medical expenses. Moreover, with no restrictions on room rent, the SBI Arogya Supreme Pro Plan gives you the freedom to select any room. There is no limit on ICU rent and no provision for copayments either. However, an optional deductible is applicable under the policy, and you have the flexibility to choose from the following options: 25K/50K/100K/200K/300K as an option. Common medical procedures and treatments, such as joint replacement surgery and cataract treatments, are not restricted under this plan and are therefore covered up to the sum insured. Notably, under this plan, specific treatments have a 24-month waiting time, whereas pre-existing conditions have a 36-month waiting period.</p>
-
-    <h2>Royal Sundaram Next Gen</h2>
-    <p>The Royal Sundaram Next Gen Plan provides comprehensive coverage that encompasses hospitalisation costs, as well as pre and post-hospitalization expenses. Pre-hosp expenses are covered for up to 90 days before admission, while post-hospitalization expenses are covered for up to 180 days after discharge, both within the sum insured. Additionally, the policy covers all daycare treatments, domiciliary treatments (except for 15 illnesses), expenses of donors for organ donation procedures, and modern treatments all up to the sum insured. Please note that non-medical expenses are covered up to the sum assured as an add-on. Moreover, the plan offers the flexibility to choose any room without imposing room rent limits, though it is available as an add-on. There are no limits on ICU rent or deductibles. Also, this plan offers an optional co-payment of 10% to 50%. The policy covers common medical treatments and surgeries, such as cataract and joint replacement surgeries, up to the sum insured. However, it's important to note that pre-existing conditions and specific conditions have a 12-month waiting period (as an add-on). As an add-on, this plan allows a 90-day waiting period for conditions like BP, Diabetes, and Heart Disease (unless these diseases are classified as pre-existing conditions).</p>
-
-    <h2>NIA - Yuva Bharat Health - Base Plan</h2>
-    <p>The NIA - Yuva Bharat Health - Base Plan Plan provides comprehensive coverage for hospitalisation, pre-hospitalisation, and post-hospitalisation expenses. It covers pre- costs for up to 60 days before you're admitted and post-hospitalisation expenses for up to 90 days after discharge, all within the sum insured. Plus, it includes everything from day care procedures and domiciliary treatments to expenses for organ donation, modern treatments, and non-medical expenses, all up to sum assured. The Tata AIG MediCare Premier Plan gives you the freedom to choose any hospital room without room rent limits. Furthermore, there is no ICU rent limit, copayments, or deductibles under the plan. The policy places no restrictions on common medical treatments or surgeries, like cataracts, joint replacement surgeries, etc. However, it's important to know that pre-existing conditions come with a 24-month waiting period, and certain specific diseases also carry a 24-month waiting period.</p>
-</div>-->
-
+    
 </body>
 
 </html>
